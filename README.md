@@ -1,6 +1,6 @@
 # III JORNADA CIENTÍFICA 2025
 
-![Banner de la Jornada Científica 2025](./assets/images/banner-jornada-cientifica.jpg)
+![Banner de la Jornada Científica 2025](images/banner.png)
 
 Bienvenido al sitio web oficial de la III Jornada Científica 2025, un espacio dedicado al intercambio de conocimientos y avances en la investigación científica.
 
