@@ -83,72 +83,81 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         .container {
             width: 100%;
-            max-width: 420px;
+            max-width: 640px;
+            /* Aumentado desde 420px */
         }
 
         .login {
             background: #fff;
-            padding: 2rem;
+            padding: 3rem;
             border-radius: 16px;
             border: 2px solid rgba(56, 189, 248, 0.4);
             box-shadow: 0 0 35px rgba(34, 211, 238, 0.3);
+            font-size: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            /* Centra el texto interno */
         }
 
-        .login__header {
-            text-align: center;
-            margin-bottom: 1.5rem;
+        .login__header,
+        .login__form,
+        .login__footer {
+            width: 100%;
         }
 
         .login__title {
-            font-size: 1.8rem;
-            color: #0a2239;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
         }
 
         .login__subtitle {
-            color: #64748b;
+            font-size: 1.2rem;
         }
 
         .form-group {
-            margin-bottom: 1.2rem;
-            padding: 1rem;
-            border: 1px solid #bae6fd;
-            border-radius: 10px;
-            background: #f8fafc;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .form-group:hover {
-            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .form-group label {
             font-weight: 600;
-            display: block;
-            margin-bottom: 0.3rem;
+            font-size: 1.3rem;
+            /* Más grande el texto "Usuario" y "Contraseña" */
+            margin-bottom: 0.6rem;
         }
 
         .input-with-icon {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
+            justify-content: center;
         }
 
         .input-with-icon i {
+            font-size: 1.4rem;
             color: #0a2239;
         }
 
         .form-control {
-            flex: 1;
-            padding: 0.6rem;
+            flex: 2;
+            padding: 1.2rem;
+            font-size: 1.6rem;
+            /* Un poquito más grande */
             border-radius: 6px;
             border: 1px solid #cbd5e1;
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         .btn {
             width: 100%;
-            padding: 1rem 0;
-            font-size: 1rem;
+            padding: 1.2rem 0;
+            font-size: 1.15rem;
             font-weight: 600;
             color: white;
             background: #05bca9;
@@ -166,7 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         .login__footer {
             text-align: center;
-            margin-top: 1.5rem;
+            margin-top: 1.8rem;
+            font-size: 1.05rem;
         }
 
         .login__footer a {
@@ -175,11 +185,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         .error {
-            margin-top: 1rem;
+            margin-top: 1.2rem;
+            font-size: 1.05rem;
             color: #dc2626;
             font-weight: 500;
             background: #fee2e2;
-            padding: 0.8rem;
+            padding: 1rem;
             border-radius: 8px;
         }
     </style>
@@ -188,6 +199,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="container">
         <div class="login">
+
+            <!-- Botón de regreso -->
+            <a href="index.html" style="align-self:flex-start; margin-bottom:1rem;
+                display:inline-flex; align-items:center; gap:0.5rem; text-decoration:none;
+                color:#0a2239; font-weight:600; font-size:1rem;
+                background: #e0f2fe; padding:0.5rem 1rem; border-radius:999px;
+                transition: background 0.3s ease, transform 0.3s ease;"
+                onmouseover="this.style.background='#bae6fd'; this.style.transform='translateX(-2px)'"
+                onmouseout="this.style.background='#e0f2fe'; this.style.transform='none'">
+                <i class="fas fa-arrow-left"></i>
+                Volver
+            </a>
+
             <div class="login__header">
                 <h2 class="login__title">Bienvenido</h2>
                 <p class="login__subtitle">Inicia sesión para continuar</p>
