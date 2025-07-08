@@ -5,19 +5,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Consulta para verificar las credenciales (tabla correcta y verificación de hash)
-    $stmt = $pdo->prepare('SELECT * FROM usuarios WHERE username = ?');
+    // Consulta para verificar las credenciales con JOIN a la tabla de roles
+    $stmt = $pdo->prepare('SELECT u.*, r.nombre as rol_nombre FROM usuarios u 
+                          JOIN roles r ON u.rol_id = r.id 
+                          WHERE u.username = ?');
     $stmt->execute([$username]);
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
         // Credenciales válidas, iniciar sesión
         $_SESSION['user_id'] = $user['id'];
-        header('Location: dashboard.php'); // Redirigir al panel de control
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['user_role'] = $user['rol_nombre'];
+        $_SESSION['rol_id'] = $user['rol_id'];
+        
+        // Redirigir según el rol (1 = admin)
+        if ($user['rol_id'] == 1) {
+            header('Location: soft-ui-dashboard-main/pages/dashboard.html');
+        } else {
+            header('Location: index.php');
+        }
         exit;
     } else {
         // Credenciales inválidas
-        echo '<p class="error">Usuario o contraseña incorrectos.</p>';
+        $error = 'Usuario o contraseña incorrectos.';
     }
 }
 ?>
