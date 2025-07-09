@@ -1,9 +1,9 @@
 <?php
-// Configuraciš®n de la base de datos local
-$host = '161.129.68.42';
+// Configuración de la base de datos local
+$host = 'localhost';
 $db   = 'cursoen2_sistema_educativo';
-$user = 'cursoen2_ale';  // En XAMPP, el usuario por defecto es 'root'
-$pass = 'p6,n@KQKj[*a';      // En XAMPP, la contrase09a por defecto estš¢ vacšªa
+$user = 'root';  // En XAMPP, el usuario por defecto es 'root'
+$pass = '';      // En XAMPP, la contraseña por defecto está vacía
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";

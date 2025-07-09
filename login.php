@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Redirigir según el rol (1 = admin)
         if ($user['rol_id'] == 1) {
-            header('Location: soft-ui-dashboard-main/pages/dashboard.html');
+            header('Location: admin/pages/dashboard.php');
         } else {
             header('Location: index.php');
         }
