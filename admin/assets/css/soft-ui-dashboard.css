@@ -12,7 +12,7 @@
   --bs-purple: #a855f7;
   --bs-pink: #ec4899;
   --bs-red: #ef4444;
-  --bs-orange: #f97316;
+  --bs-orange: #ededed;
   --bs-yellow: #eab308;
   --bs-green: #22c55e;
   --bs-teal: #14b8a6;
@@ -29,7 +29,7 @@
   --bs-gray-700: #3f3f46;
   --bs-gray-800: #27272a;
   --bs-gray-900: #18181b;
-  --bs-primary: #f97316;
+  --bs-primary: #ececec;
   --bs-secondary: #71717a;
   --bs-success: #22c55e;
   --bs-info: #0ea5e9;
@@ -95,10 +95,10 @@
   --bs-tertiary-bg: #f4f4f5;
   --bs-tertiary-bg-rgb: 244, 244, 245;
   --bs-heading-color: #27272a;
-  --bs-link-color: #f97316;
+  --bs-link-color: #f6f6f6;
   --bs-link-color-rgb: 249, 115, 22;
   --bs-link-decoration: none;
-  --bs-link-hover-color: rgb(189.6171548117, 80.5669456067, 4.8828451883);
+  --bs-link-hover-color: rgb(254, 254, 254);
   --bs-link-hover-color-rgb: 190, 81, 5;
   --bs-link-hover-decoration: none;
   --bs-code-color: #ec4899;
@@ -24616,7 +24616,7 @@ html {
 }
 
 .navbar-vertical .navbar-nav>.nav-item .nav-link.active .icon {
-  background-image: linear-gradient(310deg, #f97316 0%, #f97316 100%);
+  background-image: linear-gradient(310deg, #000000 0%, #000000 100%);
   color: #fff;
 }
 
