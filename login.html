@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión - Jornada Científica 2025</title>
+  <meta name="description" content="Inicio de sesión (mock) - III Jornada Científica 2025" />
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="auth-page" id="top">
+  <a href="#main" class="skip-link">Ir al contenido</a>
+
+  <main id="main" class="auth">
+    <div class="container auth__shell">
+      <a class="auth__back" href="index.html">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        Volver
+      </a>
+
+      <section class="auth__card reveal">
+        <div class="auth__brand">
+          <img src="images/logo.png" alt="Logo Jornada Científica" width="44" height="44">
+          <div>
+            <h1 class="auth__title">Bienvenido</h1>
+            <p class="auth__subtitle">Inicia sesión para continuar</p>
+          </div>
+        </div>
+
+        <form id="login-form" class="auth__form" action="#" method="post" novalidate>
+          <div class="field">
+            <label for="username">Usuario</label>
+            <div class="auth__input">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" autocomplete="username" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="password">Contraseña</label>
+            <div class="auth__input">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+              <button class="auth__toggle" type="button" aria-label="Mostrar contraseña" aria-pressed="false">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.3" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="auth__row">
+            <label class="checkbox-wrap">
+              <input type="checkbox" id="remember" name="remember">
+              <span class="checkbox-custom"></span>
+              <span>Recordarme</span>
+            </label>
+
+            <a class="auth__link" href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+            Iniciar sesión (mock)
+          </button>
+
+          <p class="auth__hint" id="login-hint" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <p class="auth__footer small">© 2025 III Jornada Científica</p>
+    </div>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
